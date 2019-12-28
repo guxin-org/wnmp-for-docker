@@ -1,26 +1,8 @@
 @echo off
 echo 'Stop All...';
-cmd /c call docker stop mysql57
-cmd /c call docker stop mysql80
-cmd /c call docker stop php54
-cmd /c call docker stop php55
-cmd /c call docker stop php56
-cmd /c call docker stop php70
-cmd /c call docker stop php71
-cmd /c call docker stop php72
-cmd /c call docker stop php73
-cmd /c call docker stop nginx
+cmd /c call docker stop mysql57 mysql80 php54 php55 php56 php70 php71 php72 php73 nginx
 echo 'Clear All...';
-cmd /c call docker rm mysql57
-cmd /c call docker rm mysql80
-cmd /c call docker rm php54
-cmd /c call docker rm php55
-cmd /c call docker rm php56
-cmd /c call docker rm php70
-cmd /c call docker rm php71
-cmd /c call docker rm php72
-cmd /c call docker rm php73 
-cmd /c call docker rm nginx
+cmd /c call docker rm mysql57 mysql80 php54 php55 php56 php70 php71 php72 php73 nginx
 echo 'Clear Files';
 rd /s /q %~dp0mysql-5.7-log
 rd /s /q %~dp0mysql-8.0-log
