@@ -59,7 +59,7 @@ server {
     #
     location ~ \.php$ {
         root           /var/www/html;           #修改为php映射的项目路径
-        fastcgi_pass   172.18.0.4:9000;         #此处php几个版本的固定ip
+        fastcgi_pass   172.99.0.4:9000;         #此处php几个版本的固定ip
         fastcgi_index  index.php;
         fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;   #修改脚本的运行方式
         include        fastcgi_params;
@@ -77,7 +77,7 @@ server {
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;修改保存后请运行命令 docker restart nginx 重启nginx容器。
 
 #### 清除
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;清除环境之前请切记将 www 目录下你的项目备份出来（没有的话则不用管），然后运行 <kbd>bin</kbd> 目录下的 <kbd>clear wnmp.bat</kbd> 脚本。执行后会删除相关容器及文件。
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;清除环境请运行 <kbd>bin</kbd> 目录下的 <kbd>clear wnmp.bat</kbd> 脚本。执行后会删除相关容器及文件。
 
 #### 容器IP
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;为方便php版本切换，故将docker容器的IP固定。当然可以根据自己的实际需求修改容器IP（修改 <kbd>init wnmp.bat</kbd> 脚本）。
